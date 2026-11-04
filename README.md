@@ -21,7 +21,7 @@ The new `report.html` opens beside the Word report and supplement workbook. It i
 
 The ring shows family composition. Select a segment or a family in **Across the runs** to inspect it; each run is a point, so variation is visible beside the mean. Short labels keep the view readable, and pop-ups show the exact values and explanations. Displayed result numbers are traced to the selected report, supplement or stored project values; the page does not rerun the analysis.
 
-![The same synthetic report in dark mode](docs/images/report-dark.png)
+![Synthetic interactive report in dark mode](docs/images/report-dark.png)
 
 The **Compare family measures** dot plot opens with protein estimate (greedy) on X, mean ion current share on Y, and proteins with their own peptide as Size, when those measures are available. You can change X, Y and Size to other measures available in your project, such as peptide count, run-to-run SD and CV. Each dot represents a family, and its area reflects the selected size measure. Hover over or select a dot for its values; selecting it also selects the family elsewhere in the report. The plot labels its axis scales, and hollow markers indicate unplottable or zero-size values.
 
@@ -96,9 +96,11 @@ Choose **Analysis > Results** to explore the stored quantitation. Return to **Vi
 
 Choose **File > Report details**. Enter the title, authors, sample description, workflow, database kind and any written interpretation you want to include. Choose **Save details**, then **File > Save** to keep the changes in the project. The program's own findings are written from stored studies; your panel text and written interpretation remain separately identified.
 
-![Two synthetic dialogs: report details on the left and export selection on the right](docs/images/app-report-dialogs.png)
+Choose **File > Export report** after Results are ready. Select sections and figures; each figure is listed by what it shows. Adjust **Report threshold (%)** if needed, and choose where to save the Word report.
 
-Choose **File > Export report** after Results are ready. Select sections and figures, adjust **Report threshold (%)** if needed, and choose where to save the Word report. FamilyQuant writes three files beside one another with the same base name:
+![Synthetic Export report dialog with figures listed by their descriptive titles](docs/images/app-report-dialogs.png)
+
+FamilyQuant writes three files beside one another with the same base name:
 
 - `report.docx` - the Word report.
 - `report_supplement.xlsx` - detailed tables and source values.
@@ -110,7 +112,7 @@ The chosen base name replaces `report` in all three filenames. Keep the files to
 
 Open `report.html` in a browser. Start with the composition ring and the ranked per-run view, select a family for its details, then inspect available sequence coverage, credited signal and the Database gap. Select information buttons or values for explanations and exact values. Use the theme control for light or dark, and **Print** for a print-friendly view.
 
-![Synthetic report showing the composition ring and ranked families in light mode](docs/images/report-light.png)
+![Synthetic report showing the composition ring and ranked families in dark mode](docs/images/report-dark.png)
 
 ### 8. Optionally draft an interpretation with AI
 
