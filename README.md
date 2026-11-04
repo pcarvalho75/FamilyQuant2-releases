@@ -17,7 +17,7 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 
 ## What's new in 2.1.3
 
-The per-user Setup.exe installer adds a Start menu shortcut and an uninstall entry. FamilyQuant checks for updates at start-up and offers **Install update** in a banner when a new version is available; **Help > Install update** provides the same action. The ZIP remains available.
+The per-user Setup.exe installer adds a Start menu shortcut and an uninstall entry. FamilyQuant checks for updates at start-up and offers **Install update** in a banner when a new version is available; **Help > Install update** provides the same action. To turn the start-up check off, clear **Help > Check for updates at startup**. The ZIP remains available.
 
 Earlier highlights include the **2.1.2 interactive HTML report**, which accompanies the Word report and workbook and includes a configurable family dot plot with linked selection and details on demand. Other 2.1.x improvements include:
 
@@ -60,7 +60,7 @@ Install FamilyQuant 2.1.3 for your Windows user:
 
 Uninstall it through **Apps & features**. Upgrading keeps your data.
 
-FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**.
+FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**. To stop the check at start, clear **Help > Check for updates at startup**.
 
 If you prefer the ZIP, download it from the release page, extract **the entire ZIP** into a folder where you can write files, and run `FamilyQuant2.exe` from that folder. The ZIP is self-contained and includes the .NET runtime.
 
