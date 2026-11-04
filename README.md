@@ -94,7 +94,7 @@ Open **View > Families**. The **Grouping** panel highlights the next step and sh
 
 The **Read grouping task** screen counts the taxa it asks UniProt about and needs an internet connection.
 
-![Synthetic Families screen with evidence grouping controls](docs/images/app-families.png)
+![Synthetic dark Families screen with the four numbered Grouping steps, next-step highlight and status](docs/images/app-families.png)
 
 ### 4. Add inputs and compute
 
