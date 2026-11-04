@@ -5,18 +5,20 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.5</h1>
+<h1 align="center">FamilyQuant 2.1.6</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.5](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.6](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.5
+## What's new in 2.1.6
 
-The Families screen's **Grouping** panel now numbers the steps: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Compute full XIC**. It highlights the next step and shows each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
+**Recent projects** hides files that are unavailable and shows them again when they become reachable. To remove an entry from the list, right-click it and choose **Remove from recent projects**, use its small **x**, or select it and press **Delete**. Removing an entry leaves the project file untouched.
+
+Earlier, **2.1.5** introduced the Families screen's guided **Grouping** panel: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Compute full XIC**. It highlights the next step and shows each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
 
 Earlier, **2.1.4** added database entries to the family dot plot's X, Y and Size choices. When the required measures are available, it opens with database entries against mean ion current share. To see this in an existing project, use **File > Export report** to create a fresh HTML report. No Compute is needed, and existing calculated numbers do not change.
 
@@ -55,9 +57,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Install FamilyQuant 2.1.5 for your Windows user:
+Install FamilyQuant 2.1.6 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.5, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.6, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
