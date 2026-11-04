@@ -40,14 +40,14 @@ Earlier 2.1.x improvements include:
 
 - **Faster Compute:** a faster search engine reduces work on the same inputs; the time depends on the project and computer.
 - **Panel-family totals:** when your panel combines families, the headline presents their combined panel-family total while the supplement retains the original detail.
-- **Score tier:** de novo evidence is credited to proteins tied at its best score by default. Opening an existing project preserves its stored results; the rule applies when you run Compute again.
+- **Score tier, on by default:** a de novo peptide is credited only to the proteins tied at its best score; an identified peptide is credited to the proteins that contain it. Opening an existing project preserves its stored results; the rule applies when you run Compute again.
 - **Clearer reports and progress:** program-written findings, saved report details, explanations for unavailable values, counted progress and reusable search results.
 
 ## Install or update
 
 1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) and download its FamilyQuant zip.
 2. Extract **the entire zip** into a folder where you can write files.
-3. Run `FamilyQuant2.exe` from the extracted folder. Nothing is installed, and the .NET runtime is included.
+3. Run `FamilyQuant2.exe` from the extracted folder. The zip on this page is self-contained: it includes the .NET runtime, and nothing is installed.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5. To check for a newer release later, choose **Help > Check for updates**; the app opens the release page on request and does not install an update for you.
 
