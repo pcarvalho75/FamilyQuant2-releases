@@ -37,7 +37,7 @@ The ring shows family composition. Select a segment or a family in **Across the 
 
 The **Compare family measures** dot plot opens with database entries on X, mean ion current share on Y, and proteins with their own peptide as Size, when all three measures are available. Database entries are the number of the database's target entries that the curation assigns to the family; decoys and contaminants are left out. A panel family counts the distinct entries assigned to its member families. You can change X, Y and Size to other measures available in your project, such as protein estimate (greedy), peptide count, run-to-run SD and CV. Each dot represents a family, and its area reflects the selected size measure. Hover over or select a dot for its values; selecting it also selects the family elsewhere in the report. The plot labels its axis scales, and hollow markers indicate unplottable or zero-size values.
 
-![Synthetic family dot plot with measure selectors and a value tooltip](docs/images/report-dot-plot.png)
+![Synthetic dark family dot plot with database entries on X, mean ion current share on Y, and proteins with their own peptide as Size](docs/images/report-dot-plot.png)
 
 A selected family's detail shows its available parts and sequence coverage. The **Credited family signal** and **Database gap** views answer different questions and retain their own labelled bases.
 
