@@ -5,19 +5,30 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.2</h1>
+<h1 align="center">FamilyQuant 2.1.3</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download the latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.3](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
-> **Version note:** This guide describes FamilyQuant 2.1.2. Until 2.1.2 is published, the latest-release link may offer an earlier version.
+> **Version note:** This guide describes FamilyQuant 2.1.3. Until 2.1.3 is published, the latest-release link may offer an earlier version.
+
+## What's new in 2.1.3
+
+The per-user Setup.exe installer adds a Start menu shortcut and an uninstall entry. FamilyQuant checks for updates at start-up and offers **Install update** in a banner when a new version is available; **Help > Install update** provides the same action. The ZIP remains available.
+
+Earlier highlights include the **2.1.2 interactive HTML report**, which accompanies the Word report and workbook and includes a configurable family dot plot with linked selection and details on demand. Other 2.1.x improvements include:
+
+- **Faster Compute:** a faster search engine reduces work on the same inputs; the time depends on the project and computer.
+- **Panel-family totals:** when your panel combines families, the headline presents their combined panel-family total while the supplement retains the original detail.
+- **Score tier, on by default:** a de novo peptide is credited only to the proteins tied at its best score; an identified peptide is credited to the proteins that contain it. Opening an existing project preserves its stored results; the rule applies when you run Compute again.
+- **Clearer reports and progress:** program-written findings, saved report details, explanations for unavailable values, counted progress and reusable search results.
 
 ## Explore the report
 
-The new `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it.
+The `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it.
 
 The ring shows family composition. Select a segment or a family in **Across the runs** to inspect it; each run is a point, so variation is visible beside the mean. Short labels keep the view readable, and pop-ups show the exact values and explanations. Displayed result numbers are traced to the selected report, supplement or stored project values; the page does not rerun the analysis.
 
@@ -37,34 +48,21 @@ On a narrow screen, select an information button to open its details. The exampl
 
 All screenshots on this page use synthetic data.
 
-## What's new
-
-**FamilyQuant 2.1.2** adds the interactive HTML report described above. It uses the selected report's prepared data and accompanies the existing Word report and workbook. Its configurable family dot plot compares available measures, with linked family selection and details on demand.
-
-Earlier 2.1.x improvements include:
-
-- **Faster Compute:** a faster search engine reduces work on the same inputs; the time depends on the project and computer.
-- **Panel-family totals:** when your panel combines families, the headline presents their combined panel-family total while the supplement retains the original detail.
-- **Score tier, on by default:** a de novo peptide is credited only to the proteins tied at its best score; an identified peptide is credited to the proteins that contain it. Opening an existing project preserves its stored results; the rule applies when you run Compute again.
-- **Clearer reports and progress:** program-written findings, saved report details, explanations for unavailable values, counted progress and reusable search results.
-
 ## Install or update
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Starting with **version 2.1.3**, you can install FamilyQuant for your Windows user:
+Install FamilyQuant 2.1.3 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check its version, and download `FamilyQuant2-<version>-Setup.exe`.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.3, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
 Uninstall it through **Apps & features**. Upgrading keeps your data.
 
-In version 2.1.3, FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**.
+FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**.
 
 If you prefer the ZIP, download it from the release page, extract **the entire ZIP** into a folder where you can write files, and run `FamilyQuant2.exe` from that folder. The ZIP is self-contained and includes the .NET runtime.
-
-For version 2.1.2, use the ZIP. To check for a newer release, choose **Help > Check for updates**; the app opens the release page on request and does not install an update for you.
 
 ## Step-by-step
 
