@@ -50,11 +50,21 @@ Earlier 2.1.x improvements include:
 
 ## Install or update
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) and download its FamilyQuant zip.
-2. Extract **the entire zip** into a folder where you can write files.
-3. Run `FamilyQuant2.exe` from the extracted folder. The zip on this page is self-contained: it includes the .NET runtime, and nothing is installed.
+Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5. To check for a newer release later, choose **Help > Check for updates**; the app opens the release page on request and does not install an update for you.
+Starting with **version 2.1.3**, you can install FamilyQuant for your Windows user:
+
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check its version, and download `FamilyQuant2-<version>-Setup.exe`.
+2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
+3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
+
+Uninstall it through **Apps & features**. Upgrading keeps your data.
+
+In version 2.1.3, FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**.
+
+If you prefer the ZIP, download it from the release page, extract **the entire ZIP** into a folder where you can write files, and run `FamilyQuant2.exe` from that folder. The ZIP is self-contained and includes the .NET runtime.
+
+For version 2.1.2, use the ZIP. To check for a newer release, choose **Help > Check for updates**; the app opens the release page on request and does not install an update for you.
 
 ## Step-by-step
 
