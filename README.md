@@ -5,18 +5,20 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.4</h1>
+<h1 align="center">FamilyQuant 2.1.5</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.4](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.5](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.4
+## What's new in 2.1.5
 
-The family dot plot can compare each family's database entries on X, Y or Size. When the required measures are available, it opens with database entries against mean ion current share. To see this in an existing project, use **File > Export report** to create a fresh HTML report. No Compute is needed, and existing calculated numbers do not change.
+The Families screen's **Grouping** panel now numbers the steps: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Compute full XIC**. It highlights the next step and shows each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
+
+Earlier, **2.1.4** added database entries to the family dot plot's X, Y and Size choices. When the required measures are available, it opens with database entries against mean ion current share. To see this in an existing project, use **File > Export report** to create a fresh HTML report. No Compute is needed, and existing calculated numbers do not change.
 
 Earlier, **2.1.3** introduced the per-user Setup.exe installer, which adds a Start menu shortcut and an uninstall entry. FamilyQuant checks for updates at start-up and offers **Install update** in a banner when a new version is available; **Help > Install update** provides the same action. To turn the start-up check off, clear **Help > Check for updates at startup**. The ZIP remains available.
 
@@ -53,9 +55,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Install FamilyQuant 2.1.4 for your Windows user:
+Install FamilyQuant 2.1.5 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.4, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.5, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
@@ -81,15 +83,22 @@ Choose **File > Import family panel** and select your spreadsheet. Choose the sh
 
 ![Synthetic panel editor showing column and decision mapping](docs/images/app-panel.png)
 
-### 3. Review family assignments
+### 3. Follow the Grouping steps
 
-Open **View > Families**. If you need reviewed evidence, use **Fetch evidence**; then choose **Group by evidence**, review or edit the scope and choose **Update proposal**. Review ambiguous **Panel links**, confirm your choices with **Use link choices**, inspect the updated protein selections and choose **Apply grouping**. You can add a note to a link choice, and the grouping can be undone in the session.
+Open **View > Families**. The **Grouping** panel highlights the next step and shows the status of each step. Follow its numbered order:
+
+1. **Fetch evidence.** Download the UniProt evidence used to review the project's proteins.
+2. **Group by evidence.** Review or edit the scope and choose **Update proposal**. Review ambiguous **Panel links**, confirm your choices with **Use link choices**, inspect the updated protein selections and choose **Apply grouping**. You can add a note to a link choice, and the grouping can be undone in the session. If evidence is missing, choose **Download and continue** when offered; the download finishes before the review opens. If no scope can be suggested, read the explanation and fetch evidence or enter a scope.
+3. **Fetch family world.** After confirming the grouping scope, download the reviewed family references used by quantitation. If the scope is missing, follow the offer to open **Group by evidence** first.
+4. **Compute full XIC.** Open Quantify, add the matching inputs and compute as described below.
+
+The **Read grouping task** screen counts the taxa it asks UniProt about and needs an internet connection.
 
 ![Synthetic Families screen with evidence grouping controls](docs/images/app-families.png)
 
 ### 4. Add inputs and compute
 
-Choose **Analysis > Compute full XIC**. In Quantify, set **RAW folder** to the matching `.raw` acquisitions and **Identifications (.sepr2)** to the package from the same runs. **De novo folder (optional)** can contain PEAKS `*.denovoOnly.csv` or `*.denovo.csv` files and DeepNovo `*.deepnovo.csv` files; each selected source has its own score filter. **Search settings (optional)** can point to a `.params` file; if left empty, one unambiguous adjacent file may be selected automatically.
+Choose **Compute full XIC** in the Grouping panel, or **Analysis > Compute full XIC**. In Quantify, set **RAW folder** to the matching `.raw` acquisitions and **Identifications (.sepr2)** to the package from the same runs. **De novo folder (optional)** can contain PEAKS `*.denovoOnly.csv` or `*.denovo.csv` files and DeepNovo `*.deepnovo.csv` files; each selected source has its own score filter. **Search settings (optional)** can point to a `.params` file; if left empty, one unambiguous adjacent file may be selected automatically.
 
 Review the available settings and choose **Compute full XIC**. Progress shows the current step and elapsed time; **Operation log** shows recorded steps and **Cancel** requests cancellation. Save the project after a successful computation.
 
@@ -103,7 +112,7 @@ Choose **Analysis > Results** to explore the stored quantitation. Return to **Vi
 
 ### 6. Describe and export the report
 
-Choose **File > Report details**. Enter the title, authors, sample description, workflow, database kind and any written interpretation you want to include. Choose **Save details**, then **File > Save** to keep the changes in the project. The program's own findings are written from stored studies; your panel text and written interpretation remain separately identified.
+Choose **File > Report details**. Enter the title, authors, description, workflow, database kind and any written interpretation you want to include. Choose **Save details**, then **File > Save** to keep the changes in the project. The program's own findings are written from stored studies; your panel text and written interpretation remain separately identified.
 
 Choose **File > Export report** after Results are ready. Select sections and figures; each figure is listed by what it shows. Adjust **Report threshold (%)** if needed, and choose where to save the Word report.
 
