@@ -13,7 +13,6 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 
 [Download FamilyQuant 2.1.3](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
-> **Version note:** This guide describes FamilyQuant 2.1.3. Until 2.1.3 is published, the latest-release link may offer an earlier version.
 
 ## What's new in 2.1.3
 
