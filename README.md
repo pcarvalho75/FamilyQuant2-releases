@@ -18,6 +18,10 @@ The ring shows family composition. Select a segment or a family in **Across the 
 
 ![The same synthetic report in dark mode](docs/images/report-dark.png)
 
+The **Compare family measures** dot plot lets you choose X, Y and Size from the measures available in your project, such as mean ion current share, peptide count, greedy protein estimate, proteins with their own peptide, run-to-run SD and CV. Each dot represents a family, and its area reflects the selected size measure. Hover over or select a dot for its values; selecting it also selects the family elsewhere in the report. The plot labels its axis scales, and hollow markers indicate unplottable or zero-size values.
+
+![Synthetic family dot plot with measure selectors and a value tooltip](docs/images/report-dot-plot.png)
+
 A selected family's detail shows its available parts and sequence coverage. The **Credited family signal** and **Database gap** views answer different questions and retain their own labelled bases.
 
 ![Synthetic credited-signal and Database gap views](docs/images/report-signal-gap.png)
@@ -30,7 +34,7 @@ All screenshots on this page use synthetic data.
 
 ## What's new
 
-**FamilyQuant 2.1.2** adds the interactive HTML report described above. It uses the selected report's prepared data and accompanies the existing Word report and workbook.
+**FamilyQuant 2.1.2** adds the interactive HTML report described above. It uses the selected report's prepared data and accompanies the existing Word report and workbook. Its configurable family dot plot compares available measures, with linked family selection and details on demand.
 
 Earlier 2.1.x improvements include:
 
