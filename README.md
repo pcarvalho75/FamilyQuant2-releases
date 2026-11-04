@@ -1,4 +1,9 @@
-<p align="center"><img src="docs/images/familyquant-logo.svg" alt="FamilyQuant logo" width="150" height="150"></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/familyquant-lockup-dark.png">
+    <img src="docs/images/familyquant-lockup-light.png" alt="FamilyQuant" width="360">
+  </picture>
+</p>
 
 <h1 align="center">FamilyQuant 2.1.2</h1>
 
