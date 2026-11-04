@@ -18,7 +18,7 @@ The ring shows family composition. Select a segment or a family in **Across the 
 
 ![The same synthetic report in dark mode](docs/images/report-dark.png)
 
-The **Compare family measures** dot plot lets you choose X, Y and Size from the measures available in your project, such as mean ion current share, peptide count, greedy protein estimate, proteins with their own peptide, run-to-run SD and CV. Each dot represents a family, and its area reflects the selected size measure. Hover over or select a dot for its values; selecting it also selects the family elsewhere in the report. The plot labels its axis scales, and hollow markers indicate unplottable or zero-size values.
+The **Compare family measures** dot plot opens with protein estimate (greedy) on X, mean ion current share on Y, and proteins with their own peptide as Size, when those measures are available. You can change X, Y and Size to other measures available in your project, such as peptide count, run-to-run SD and CV. Each dot represents a family, and its area reflects the selected size measure. Hover over or select a dot for its values; selecting it also selects the family elsewhere in the report. The plot labels its axis scales, and hollow markers indicate unplottable or zero-size values.
 
 ![Synthetic family dot plot with measure selectors and a value tooltip](docs/images/report-dot-plot.png)
 
