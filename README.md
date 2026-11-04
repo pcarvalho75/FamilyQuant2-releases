@@ -14,15 +14,11 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 
 The new `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it.
 
-![Synthetic report showing the composition ring and ranked families in light mode](docs/images/report-light.png)
-
 The ring shows family composition. Select a segment or a family in **Across the runs** to inspect it; each run is a point, so variation is visible beside the mean. Short labels keep the view readable, and pop-ups show the exact values and explanations. Displayed result numbers are traced to the selected report, supplement or stored project values; the page does not rerun the analysis.
 
 ![The same synthetic report in dark mode](docs/images/report-dark.png)
 
 A selected family's detail shows its available parts and sequence coverage. The **Credited family signal** and **Database gap** views answer different questions and retain their own labelled bases.
-
-![Synthetic family details and sequence coverage](docs/images/report-family-detail.png)
 
 ![Synthetic credited-signal and Database gap views](docs/images/report-signal-gap.png)
 
@@ -59,13 +55,19 @@ Choose **File > Open** to open an existing FamilyQuant project (`.fqproj`) or Fa
 
 Use **File > Save** to keep the project, its curation and computed results together. Use **Save as** when you want a separate copy.
 
+![Synthetic Build families screen with the database and identity controls](docs/images/app-build.png)
+
 ### 2. Import your family panel
 
 Choose **File > Import family panel** and select your spreadsheet. Choose the sheet and header row, preview the columns, and map your family keys, names, decisions and any optional Pfam information. Map each decision to the action you intend, review the preview and choose **Apply panel**. Panel literature, notes and sources remain your supplied text; they are not measured results.
 
+![Synthetic panel editor showing column and decision mapping](docs/images/app-panel.png)
+
 ### 3. Review family assignments
 
 Open **View > Families**. If you need reviewed evidence, use **Fetch evidence**; then choose **Group by evidence**, review or edit the scope and choose **Update proposal**. Review ambiguous **Panel links**, confirm your choices with **Use link choices**, inspect the updated protein selections and choose **Apply grouping**. You can add a note to a link choice, and the grouping can be undone in the session.
+
+![Synthetic Families screen with evidence grouping controls](docs/images/app-families.png)
 
 ### 4. Add inputs and compute
 
@@ -73,15 +75,19 @@ Choose **Analysis > Compute full XIC**. In Quantify, set **RAW folder** to the m
 
 Review the available settings and choose **Compute full XIC**. Progress shows the current step and elapsed time; **Operation log** shows recorded steps and **Cancel** requests cancellation. Save the project after a successful computation.
 
+![Synthetic Quantify screen with input and compute controls](docs/images/app-quantify.png)
+
 ### 5. Read the results
 
 Choose **Analysis > Results** to explore the stored quantitation. Return to **View > Families** to inspect family assignments and the quantitation controls. Read each chart's labels and denominator: a family with **no peptide observed** in a completed study is not proof that the family is absent. Unavailable values are shown as unavailable rather than treated as zero.
 
-### 6. Describe the report
+![Synthetic Results screen with stored summary and Database gap](docs/images/app-results.png)
+
+### 6. Describe and export the report
 
 Choose **File > Report details**. Enter the title, authors, sample description, workflow, database kind and any written interpretation you want to include. Choose **Save details**, then **File > Save** to keep the changes in the project. The program's own findings are written from stored studies; your panel text and written interpretation remain separately identified.
 
-### 7. Export the three report files
+![Two synthetic dialogs: report details on the left and export selection on the right](docs/images/app-report-dialogs.png)
 
 Choose **File > Export report** after Results are ready. Select sections and figures, adjust **Report threshold (%)** if needed, and choose where to save the Word report. FamilyQuant writes three files beside one another with the same base name:
 
@@ -91,13 +97,17 @@ Choose **File > Export report** after Results are ready. Select sections and fig
 
 The chosen base name replaces `report` in all three filenames. Keep the files together so the links between them work. Save the project if you want to retain the report choices and threshold.
 
-### 8. Explore the HTML report
+### 7. Explore the HTML report
 
 Open `report.html` in a browser. Start with the composition ring and the ranked per-run view, select a family for its details, then inspect available sequence coverage, credited signal and the Database gap. Select information buttons or values for explanations and exact values. Use the theme control for light or dark, and **Print** for a print-friendly view.
 
-### 9. Optionally draft an interpretation with AI
+![Synthetic report showing the composition ring and ranked families in light mode](docs/images/report-light.png)
+
+### 8. Optionally draft an interpretation with AI
 
 The program's own report narrative is generated without an AI service. If you choose an AI draft, bring your own Anthropic API key and manage it under **Help > AI assistant key...**. The key is protected for your Windows user and is not saved in the project or report. If no key is saved and `FamilyQuant AI key.txt` is beside the opened project, the first eligible attempt offers to import it; keep that file private.
+
+![AI assistant key settings with the key field empty](docs/images/app-ai-key.png)
 
 Choose **File > Draft interpretation with AI...**. Review the exact project information and model shown, and confirm before sending the information to Anthropic. Review the returned
 draft and its list of recognized numbers not found in the input tables; a value match does not prove the meaning is correct. Accepting adds a labelled AI draft to the written interpretation; cancel or discard leaves the project unchanged. Use **File > Save** if you want to retain an accepted draft. Testing a key sends a short request without project data and may incur usage charges.
