@@ -5,34 +5,38 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.7</h1>
+<h1 align="center">FamilyQuant 2.1.8</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.7](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.8](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.7
+## What's new in 2.1.8
 
-- **Fetch evidence keeps its work.** Protein evidence is kept when the reference panel cannot finish. Fetch evidence waits and retries when UniProt is busy and resumes from the last finished batch for the same query and release. It names refused families and does not use an incomplete panel as complete. Choose **Retry panel** on the Families screen to finish it.
-- **Updates reopen FamilyQuant.** After a successful **Install update**, the app reopens and shows its updated version once. Setup compares versions: if a newer version is installed, it offers **Open FamilyQuant**; if the same version is installed, it also offers **Repair**. Installing an older version needs confirmation. Silent setup refuses downgrades. Setup has its own download-badge icon.
-- **Close a project.** **File > Close project** uses the usual Save, Discard or Cancel choice and returns to Home when the project closes.
+- **Home shows five numbered steps.** In order: **1 Build families** (group by sequence identity, USearch), **2 Curate families** (part a **Group by evidence**, part b **Group by words**), **3 Quantify** and **4 Results**, then the optional **5 De novo review**. Each step shows its state and one button, and the sidebar numbers the same steps (Alt+1 to Alt+5; Alt+0 for Home). **Open project** and **Recent projects** stay below.
+- **One name per thing.** Each screen keeps the same name in the sidebar, menus, Help and messages: **File > Build families** (formerly New from database), **Curate families** (formerly Families), **Quantify** (formerly Compute full XIC), **Results** and **De novo review** (formerly De novo evidence). The Analysis menu is now **Tools** and keeps the extra tools (**Spectrum comparison**, **Clustering diagnostic**, **Reannotate SEPro**); Quantify, Results and De novo review are also in **View**. With no project open, **Curate families** asks you to open one or to build families first.
+- **Curate families screen layout.** Both grids have a title and their headers line up, **All proteins** sits above the protein grid, family numbers are centred, and the **USearch ID** column is shown by default.
+- **Same-scan rule.** When PatternLab and a de novo call give different sequences for the same scan and precursor, the PatternLab identification wins and the de novo call receives no credit. **PatternLab wins conflicting precursors** is on by default in Quantify, and the report methods state the rule in use. Stored results change only when you run Quantify again.
+- **De novo in FamilyQuant.** A new Help page explains how Quantify uses de novo calls and why De novo review is optional.
+
+Earlier, **2.1.7** kept Fetch evidence's work: protein evidence is kept when the reference panel cannot finish, Fetch evidence waits and retries when UniProt is busy, resumes from the last finished batch for the same query and release, and names refused families; **Retry panel** finishes an incomplete panel. After a successful **Install update**, FamilyQuant reopens and shows its updated version once, and Setup compares versions before installing. **File > Close project** returns to Home after the usual Save, Discard or Cancel choice.
 
 Earlier, **2.1.6** cleaned up **Recent projects**: files that are unavailable are hidden and appear again when reachable. To remove an entry, right-click it and choose **Remove from recent projects**, use its small **x**, or select it and press **Delete**. Removing an entry leaves the project file untouched.
 
-Earlier, **2.1.5** introduced the Families screen's guided **Grouping** panel: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Compute full XIC**. It highlights the next step and shows each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
+Earlier, **2.1.5** introduced the guided **Grouping** steps, now part a of **Curate families**: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Quantify**. They highlight the next step and show each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
 
-Earlier, **2.1.4** added database entries to the family dot plot's X, Y and Size choices. When the required measures are available, it opens with database entries against mean ion current share. To see this in an existing project, use **File > Export report** to create a fresh HTML report. No Compute is needed, and existing calculated numbers do not change.
+Earlier, **2.1.4** added database entries to the family dot plot's X, Y and Size choices. When the required measures are available, it opens with database entries against mean ion current share. To see this in an existing project, use **File > Export report** to create a fresh HTML report. Quantify does not need to run again, and existing calculated numbers do not change.
 
 Earlier, **2.1.3** introduced the per-user Setup.exe installer, which adds a Start menu shortcut and an uninstall entry. FamilyQuant checks for updates at start-up and offers **Install update** in a banner when a new version is available; **Help > Install update** provides the same action. To turn the start-up check off, clear **Help > Check for updates at startup**. The ZIP remains available.
 
 Earlier highlights include the **2.1.2 interactive HTML report**, which accompanies the Word report and workbook and includes a configurable family dot plot with linked selection and details on demand. Other 2.1.x improvements include:
 
-- **Faster Compute:** a faster search engine reduces work on the same inputs; the time depends on the project and computer.
+- **Faster Quantify:** a faster search engine reduces work on the same inputs; the time depends on the project and computer.
 - **Panel-family totals:** when your panel combines families, the headline presents their combined panel-family total while the supplement retains the original detail.
-- **Score tier, on by default:** a de novo peptide is credited only to the proteins tied at its best score; an identified peptide is credited to the proteins that contain it. Opening an existing project preserves its stored results; the rule applies when you run Compute again.
+- **Score tier, on by default:** a de novo peptide is credited only to the proteins tied at its best score; an identified peptide is credited to the proteins that contain it. Opening an existing project preserves its stored results; the rule applies when you run Quantify again.
 - **Clearer reports and progress:** program-written findings, saved report details, explanations for unavailable values, counted progress and reusable search results.
 
 ## Explore the report
@@ -61,9 +65,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Install FamilyQuant 2.1.7 for your Windows user:
+Install FamilyQuant 2.1.8 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.7, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.8, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
@@ -75,9 +79,13 @@ If you prefer the ZIP, download it from the release page, extract **the entire Z
 
 ## Step-by-step
 
-### 1. Open or create families
+FamilyQuant opens on **Home**, which lists the five steps in order with each step's state and one button. Steps 1 to 4 run in order; step 5, **De novo review**, is optional because Quantify reads the de novo folders itself. The sidebar shows the same numbered steps on every screen.
 
-Choose **File > Open** to open an existing FamilyQuant project (`.fqproj`) or Family Cluster File (`.fcf`). To start from a protein database instead, choose **File > New from database**, select a FASTA or target-decoy `.T-R` file, set the identity and choose **Build families**. Open the resulting `.fcf` with **File > Open**.
+![Synthetic dark Home with the five numbered steps, an open project and its recent projects](docs/images/app-home.png)
+
+### 1. Open or build families
+
+Choose **File > Open** to open an existing FamilyQuant project (`.fqproj`) or Family Cluster File (`.fcf`). To start from a protein database instead, choose **1 Build families** on Home or the sidebar, or **File > Build families**, select a FASTA or target-decoy `.T-R` file, set the identity and choose **Build families**. Open the resulting `.fcf` with **File > Open**.
 
 Use **File > Save** to keep the project, its curation and computed results together. Use **Save as** when you want a separate copy. Choose **File > Close project** to return to Home, with Save, Discard or Cancel for unsaved changes.
 
@@ -89,30 +97,30 @@ Choose **File > Import family panel** and select your spreadsheet. Choose the sh
 
 ![Synthetic panel editor showing column and decision mapping](docs/images/app-panel.png)
 
-### 3. Follow the Grouping steps
+### 3. Curate families
 
-Open **View > Families**. The **Grouping** panel highlights the next step and shows the status of each step. Follow its numbered order:
+Open **2 Curate families** on Home or the sidebar, or **View > Curate families**. Part a, **Group by evidence**, is the **Grouping** panel: it highlights the next step and shows the status of each step. Follow its numbered order:
 
 1. **Fetch evidence.** Download the UniProt evidence used to review the project's proteins.
 2. **Group by evidence.** Review or edit the scope and choose **Update proposal**. Review ambiguous **Panel links**, confirm your choices with **Use link choices**, inspect the updated protein selections and choose **Apply grouping**. You can add a note to a link choice, and the grouping can be undone in the session. If evidence is missing, choose **Download and continue** when offered; the download finishes before the review opens. If no scope can be suggested, read the explanation and fetch evidence or enter a scope.
 3. **Fetch family world.** After confirming the grouping scope, download the reviewed family references used by quantitation. If the scope is missing, follow the offer to open **Group by evidence** first.
-4. **Compute full XIC.** Open Quantify, add the matching inputs and compute as described below.
+4. **Quantify.** Open Quantify, add the matching inputs and compute as described below.
 
-The **Read grouping task** screen counts the taxa it asks UniProt about and needs an internet connection.
+The **Read grouping task** screen counts the taxa it asks UniProt about and needs an internet connection. Part b, **Group by words**, merges families by a keyword list (**Group by keywords**) or by their description words (**Recluster by words**); both are reviewed before they apply, and **Undo** reverses them.
 
 ![Synthetic dark Families screen with the four numbered Grouping steps, next-step highlight and status](docs/images/app-families.png)
 
 ### 4. Add inputs and compute
 
-Choose **Compute full XIC** in the Grouping panel, or **Analysis > Compute full XIC**. In Quantify, set **RAW folder** to the matching `.raw` acquisitions and **Identifications (.sepr2)** to the package from the same runs. **De novo folder (optional)** can contain PEAKS `*.denovoOnly.csv` or `*.denovo.csv` files and DeepNovo `*.deepnovo.csv` files; each selected source has its own score filter. **Search settings (optional)** can point to a `.params` file; if left empty, one unambiguous adjacent file may be selected automatically.
+Choose **Quantify** in the Grouping panel, **3 Quantify** on Home or the sidebar, or **View > Quantify**. In Quantify, set **RAW folder** to the matching `.raw` acquisitions and **Identifications (.sepr2)** to the package from the same runs. **De novo folder (optional)** can contain PEAKS `*.denovoOnly.csv` or `*.denovo.csv` files and DeepNovo `*.deepnovo.csv` files; each selected source has its own score filter. **Search settings (optional)** can point to a `.params` file; if left empty, one unambiguous adjacent file may be selected automatically.
 
-Review the available settings and choose **Compute full XIC**. Progress shows the current step and elapsed time; **Operation log** shows recorded steps and **Cancel** requests cancellation. Save the project after a successful computation.
+Review the available settings, including **PatternLab wins conflicting precursors** (on by default), and choose **Quantify**. Progress shows the current step and elapsed time; **Operation log** shows recorded steps and **Cancel** requests cancellation. Save the project after a successful computation.
 
 ![Synthetic Quantify screen with input and compute controls](docs/images/app-quantify.png)
 
 ### 5. Read the results
 
-Choose **Analysis > Results** to explore the stored quantitation. Return to **View > Families** to inspect family assignments and the quantitation controls. Read each chart's labels and denominator: a family with **no peptide observed** in a completed study is not proof that the family is absent. Unavailable values are shown as unavailable rather than treated as zero.
+Choose **4 Results** on Home or the sidebar, or **View > Results**, to explore the stored quantitation. Return to **Curate families** to inspect family assignments and the quantitation controls. Read each chart's labels and denominator: a family with **no peptide observed** in a completed study is not proof that the family is absent. Unavailable values are shown as unavailable rather than treated as zero.
 
 ![Synthetic Results screen with stored summary and Database gap](docs/images/app-results.png)
 
@@ -149,7 +157,7 @@ draft and its list of recognized numbers not found in the input tables; a value 
 
 ## Troubleshooting
 
-- **Export report is unavailable or says Results are missing.** Open a computed project and wait for its family attribution to finish. If the project has no stored Results, run **Analysis > Compute full XIC** and save it first.
+- **Export report is unavailable or says Results are missing.** Open a computed project and wait for its family attribution to finish. If the project has no stored Results, run **Quantify** and save it first.
 - **An input cannot be found.** Check that the RAW folder exists and contains the acquisitions, and that the `.sepr2` package matches those runs. The optional de novo folder is searched recursively for the selected source types.
 - **A family shows no peptide observed.** This means no peptide reached that family in the completed study; it is not evidence that the family is absent. Check the panel, assignments, input coverage and the status shown for unavailable studies.
 - **A value or panel link needs explanation.** Open **Help > How to read these numbers** for the current screen, or **Help > What do I do first?** for the full workflow. Review the panel links and the audit before applying changes.
