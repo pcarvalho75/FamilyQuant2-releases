@@ -108,7 +108,7 @@ Open **2 Curate families** on Home or the sidebar, or **View > Curate families**
 
 The **Read grouping task** screen counts the taxa it asks UniProt about and needs an internet connection. Part b, **Group by words**, merges families by a keyword list (**Group by keywords**) or by their description words (**Recluster by words**); both are reviewed before they apply, and **Undo** reverses them.
 
-![Synthetic dark Families screen with the four numbered Grouping steps, next-step highlight and status](docs/images/app-families.png)
+![Synthetic dark Curate families screen with selected-family tables, USearch IDs and the evidence and word grouping parts](docs/images/app-families.png)
 
 ### 4. Add inputs and compute
 
@@ -116,7 +116,7 @@ Choose **Quantify** in the Grouping panel, **3 Quantify** on Home or the sidebar
 
 Review the available settings, including **PatternLab wins conflicting precursors** (on by default), and choose **Quantify**. Progress shows the current step and elapsed time; **Operation log** shows recorded steps and **Cancel** requests cancellation. Save the project after a successful computation.
 
-![Synthetic Quantify screen with input and compute controls](docs/images/app-quantify.png)
+![Synthetic Quantify screen with input settings, the conflict rule and the Quantify action](docs/images/app-quantify.png)
 
 ### 5. Read the results
 
