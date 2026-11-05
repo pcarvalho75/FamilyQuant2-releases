@@ -5,18 +5,22 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.6</h1>
+<h1 align="center">FamilyQuant 2.1.7</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.6](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.7](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.6
+## What's new in 2.1.7
 
-**Recent projects** hides files that are unavailable and shows them again when they become reachable. To remove an entry from the list, right-click it and choose **Remove from recent projects**, use its small **x**, or select it and press **Delete**. Removing an entry leaves the project file untouched.
+- **Fetch evidence keeps its work.** Protein evidence is kept when the reference panel cannot finish. Fetch evidence waits and retries when UniProt is busy and resumes from the last finished batch for the same query and release. It names refused families and does not use an incomplete panel as complete. Choose **Retry panel** on the Families screen to finish it.
+- **Updates reopen FamilyQuant.** After a successful **Install update**, the app reopens and shows its updated version once. Setup compares versions: if a newer version is installed, it offers **Open FamilyQuant**; if the same version is installed, it also offers **Repair**. Installing an older version needs confirmation. Silent setup refuses downgrades. Setup has its own download-badge icon.
+- **Close a project.** **File > Close project** uses the usual Save, Discard or Cancel choice and returns to Home when the project closes.
+
+Earlier, **2.1.6** cleaned up **Recent projects**: files that are unavailable are hidden and appear again when reachable. To remove an entry, right-click it and choose **Remove from recent projects**, use its small **x**, or select it and press **Delete**. Removing an entry leaves the project file untouched.
 
 Earlier, **2.1.5** introduced the Families screen's guided **Grouping** panel: **Fetch evidence**, **Group by evidence**, **Fetch family world** and **Compute full XIC**. It highlights the next step and shows each step's status. **Group by evidence** offers to download evidence first when the project has none, **Review grouping** explains why a scope cannot be suggested, and the **Read grouping task** screen counts the taxa it asks UniProt about.
 
@@ -57,15 +61,15 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Install FamilyQuant 2.1.6 for your Windows user:
+Install FamilyQuant 2.1.7 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.6, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.7, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
 Uninstall it through **Apps & features**. Upgrading keeps your data.
 
-FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**. To stop the check at start, clear **Help > Check for updates at startup**.
+FamilyQuant checks for a new version at each start. When an update is available, a banner offers **Install update**; you can also choose **Help > Install update**. After a successful update, FamilyQuant reopens and shows its updated version once. To stop the check at start, clear **Help > Check for updates at startup**.
 
 If you prefer the ZIP, download it from the release page, extract **the entire ZIP** into a folder where you can write files, and run `FamilyQuant2.exe` from that folder. The ZIP is self-contained and includes the .NET runtime.
 
@@ -75,7 +79,7 @@ If you prefer the ZIP, download it from the release page, extract **the entire Z
 
 Choose **File > Open** to open an existing FamilyQuant project (`.fqproj`) or Family Cluster File (`.fcf`). To start from a protein database instead, choose **File > New from database**, select a FASTA or target-decoy `.T-R` file, set the identity and choose **Build families**. Open the resulting `.fcf` with **File > Open**.
 
-Use **File > Save** to keep the project, its curation and computed results together. Use **Save as** when you want a separate copy.
+Use **File > Save** to keep the project, its curation and computed results together. Use **Save as** when you want a separate copy. Choose **File > Close project** to return to Home, with Save, Discard or Cancel for unsaved changes.
 
 ![Synthetic Build families screen with the database and identity controls](docs/images/app-build.png)
 
