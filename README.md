@@ -5,16 +5,26 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.8</h1>
+<h1 align="center">FamilyQuant 2.1.9</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.8](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.9](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.8
+## What's new in 2.1.9
+
+- **Read database and scope** uses batched UniProt taxonomy queries for the species in the database, respects the server's Retry-After wait on HTTP 429, and keeps completed lineages for a retry.
+- **Evidence is added to the open project.** Messages now say what was added and remind you to use **File > Save** to keep it.
+- **Reconcile Help matches the code.** De novo Help describes the direct precursor m/z match within 20 ppm.
+- **Neutral presentation captions.** Exported presentation figures use neutral caption text.
+- **Shorter cache names.** Evidence resume cache files use shorter names to reduce path length.
+
+### Earlier highlights
+
+**2.1.8** introduced:
 
 - **Home shows five numbered steps.** In order: **1 Build families** (group by sequence identity, USearch), **2 Curate families** (part a **Group by evidence**, part b **Group by words**), **3 Quantify** and **4 Results**, then the optional **5 De novo review**. Each step shows its state and one button, and the sidebar numbers the same steps (Alt+1 to Alt+5; Alt+0 for Home). **Open project** and **Recent projects** stay below.
 - **One name per thing.** Each screen keeps the same name in the sidebar, menus, Help and messages: **File > Build families** (formerly New from database), **Curate families** (formerly Families), **Quantify** (formerly Compute full XIC), **Results** and **De novo review** (formerly De novo evidence). The Analysis menu is now **Tools** and keeps the extra tools (**Spectrum comparison**, **Clustering diagnostic**, **Reannotate SEPro**); Quantify, Results and De novo review are also in **View**. With no project open, **Curate families** asks you to open one or to build families first.
@@ -65,9 +75,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
 
-Install FamilyQuant 2.1.8 for your Windows user:
+Install FamilyQuant 2.1.9 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.8, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.9, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
