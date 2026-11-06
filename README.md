@@ -17,7 +17,7 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 ## What's new in 2.1.10
 
 - **Group by evidence stays open.** The progress card layout has been fixed. Errors in the review window are shown and logged.
-- **Error reports.** On an unexpected error, FamilyQuant saves a report in its logs folder and shows where it was written. Use **Help > Open error logs folder** to open the folder.
+- **Error reports.** If an unexpected error forces FamilyQuant to close, it first saves a report in its logs folder and says where. Errors in background work are recorded in the same folder without closing the program. Use **Help > Open error logs folder** to open the folder.
 
 ### Earlier highlights
 
