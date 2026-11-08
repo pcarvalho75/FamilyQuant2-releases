@@ -5,21 +5,38 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.10</h1>
+<h1 align="center">FamilyQuant 2.1.11</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.10](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.11](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.10
+## What's new in 2.1.11
+
+- **Import a whole workbook.** **File > Import family list** opens **Review your workbook** with the family list, workbook map, legend meanings, decisions, Pfam matches, subclass proposals and kept notes together. Change any section, then press **Accept and import** to keep the reviewed choices in one undoable step. Nothing changes in the project before that press.
+- **Keep your source and your choices.** Review recognized required or absent Pfam rules, inspect the original cells, and edit or leave out proposals. Overlapping subclass definitions are named before import for review. Unmatched expected subclass names and other text the program cannot interpret stay as notes, which survive Save and reopen. Confirming the current family sheet keeps the draft; selecting another asks before clearing it.
+- **Clearer import screens and Help.** Plain workbook messages point to the named review section, required choices are distinct from optional findings, and cell tooltips explain their column and value, including blank cells. Review tables and controls fit smaller windows, and the Decision-column question and source legend have clearer explanations. Try the example, save a template, or press **F1** for the illustrated workbook guide.
+- **Family checklist and explicit curation.** Inspect matching proteins and reasons for leaving others out. **Add to scope** previews a keyword's effect; **Add to family** records choices as **Added by hand**, and families added by hand are displayed by name. Evidence matches show their coverage, and a broad match asks an extra counted question. Matching labels alone does not move proteins.
+- **Fetch a reference panel for your scope.** The reference panel can be fetched for the chosen scope, with **Fetch missing panel** after widening it. **Full panel** remains available. Older projects keep their stored full panel until you explicitly fetch again.
+- **Large projects and smaller saves.** Streamed reads and writes avoid one large text copy; compact files store repeated records once. Import and report checks show lower peak memory while preserving the checked content.
+- **Readable tables and helpful controls.** Table text stays readable when controls are re-enabled or the theme changes, including in dark mode. Tooltips explain actions, column headers and unavailable controls.
+- **Know what to do next.** Older projects explain when grouping, locks, Quantify or Sensitivity need attention. After applying panel grouping, a reminder says to run **Quantify** again before **Export report**.
+
+**File compatibility.** FamilyQuant 2.1.11 opens older projects and `.fcf` files. Saving upgrades projects to version 3 with curation format 2; `.fcf` saves also use format 2. New saves require 2.1.11. Version 2.1.10 refuses a version-3 project with "Update FamilyQuant to open it". The FamilyQuant 1.5 export has been removed.
+
+**Older calculated results.** On the checked project originally saved by 2.1.0, recomputing kept identified rows unchanged. De novo rows can differ because **PatternLab wins conflicting precursors**, on by default since 2.1.8, removes calls that conflict with a database identification for the same scan and precursor. Newly run Quantify credits a de novo peptide to targets tied at its best match score; earlier quantitation could credit every target above the identity threshold. On one checked project, the resulting family-share changes were at most about 0.1 percentage points.
+
+**Feature ledger.** 2,220 checks proved for 2.1.11; 3,240 remain open to verify again after release.
+
+### Earlier highlights
+
+**2.1.10** introduced:
 
 - **Group by evidence stays open.** The progress card layout has been fixed. Errors in the review window are shown and logged.
 - **Error reports.** If an unexpected error forces FamilyQuant to close, it first saves a report in its logs folder and says where. Errors in background work are recorded in the same folder without closing the program. Use **Help > Open error logs folder** to open the folder.
-
-### Earlier highlights
 
 **2.1.9** introduced
 
@@ -78,11 +95,11 @@ All screenshots on this page use synthetic data.
 
 ## Install or update
 
-Use 64-bit Windows 10 or 11. FamilyQuant 2 can sit beside FamilyQuant 1.5.
+Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.10 for your Windows user:
+Install FamilyQuant 2.1.11 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.10, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.11, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
@@ -106,11 +123,11 @@ Use **File > Save** to keep the project, its curation and computed results toget
 
 ![Synthetic Build families screen with the database and identity controls](docs/images/app-build.png)
 
-### 2. Import your family panel
+### 2. Import family list
 
-Choose **File > Import family panel** and select your spreadsheet. Choose the sheet and header row, preview the columns, and map your family keys, names, decisions and any optional Pfam information. Map each decision to the action you intend, review the preview and choose **Apply panel**. Panel literature, notes and sources remain your supplied text; they are not measured results.
+Choose **File > Import family list** and select your Excel workbook. **Review your workbook** shows the proposed sheets, columns, colours, decisions, matches, subclasses and kept notes together. Open a section to change its choices, then choose **Accept and import**. The import is one undoable step. Continue to **Family checklist** to review protein assignments. Your literature, notes and sources stay identified as supplied text.
 
-![Synthetic panel editor showing column and decision mapping](docs/images/app-panel.png)
+Use **F1** or **Help** in the import window for the illustrated guide.
 
 ### 3. Curate families
 
