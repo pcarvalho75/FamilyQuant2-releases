@@ -5,25 +5,28 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.12</h1>
+<h1 align="center">FamilyQuant 2.1.13</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.12](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.13](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.12
+## What's new in 2.1.13
+
+- **Read database and scope works while UniProt's bulk downloads are down.** It now uses the keyword categories that **Fetch evidence** already saved in the project, and reads UniProt's keyword list only for keywords without one, page by page. Species lineages are read page by page too.
+- **The Scope box is always visible.** In **Review grouping > Evidence**, the Scope box and **Update proposal** sit directly under **Database and scope** and no longer scroll out of sight.
+
+### Earlier highlights
+
+**2.1.12** introduced:
 
 - **AI Help.** **Help > Ask AI Help** (Ctrl+H, from any FamilyQuant window) answers questions about FamilyQuant. It sends your question, what the program shows (version, screen, project, last error and the last lines of the log) and, only when you tick it, a picture of the window to Claude with your own Anthropic key, the same key as the AI draft. For technical questions it reads the FamilyQuant source code on GitHub and names the files and lines it used. **What AI Help sends** shows the text before you ask.
 - **GitHub's limits.** GitHub allows 10 code searches a minute and 5,000 file reads an hour for all FamilyQuant users together. When a limit is reached, AI Help says so and when reading resumes.
 - **Report this as a bug.** From AI Help, **Report this as a bug...** opens an editable report, then a new issue on the FamilyQuant releases page on GitHub with the full report on the clipboard and the picture saved for you to drag in. You submit it from your own GitHub account; issues there are public.
 - **AI assistant key.** The key window says the same key is used by AI Help.
-
-**Feature ledger.** 2,225 checks proved for 2.1.12; 3,235 remain open to verify again after release.
-
-### Earlier highlights
 
 **2.1.11** introduced:
 
@@ -105,9 +108,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.12 for your Windows user:
+Install FamilyQuant 2.1.13 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.12, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.13, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
