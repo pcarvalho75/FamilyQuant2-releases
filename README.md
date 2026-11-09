@@ -5,16 +5,27 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.11</h1>
+<h1 align="center">FamilyQuant 2.1.12</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.11](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.12](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.11
+## What's new in 2.1.12
+
+- **AI Help.** **Help > Ask AI Help** (Ctrl+H, from any FamilyQuant window) answers questions about FamilyQuant. It sends your question, what the program shows (version, screen, project, last error and the last lines of the log) and, only when you tick it, a picture of the window to Claude with your own Anthropic key, the same key as the AI draft. For technical questions it reads the FamilyQuant source code on GitHub and names the files and lines it used. **What AI Help sends** shows the text before you ask.
+- **GitHub's limits.** GitHub allows 10 code searches a minute and 5,000 file reads an hour for all FamilyQuant users together. When a limit is reached, AI Help says so and when reading resumes.
+- **Report this as a bug.** From AI Help, **Report this as a bug...** opens an editable report, then a new issue on the FamilyQuant releases page on GitHub with the full report on the clipboard and the picture saved for you to drag in. You submit it from your own GitHub account; issues there are public.
+- **AI assistant key.** The key window says the same key is used by AI Help.
+
+**Feature ledger.** 2,225 checks proved for 2.1.12; 3,235 remain open to verify again after release.
+
+### Earlier highlights
+
+**2.1.11** introduced:
 
 - **Import a whole workbook.** **File > Import family list** opens **Review your workbook** with the family list, workbook map, legend meanings, decisions, Pfam matches, subclass proposals and kept notes together. Change any section, then press **Accept and import** to keep the reviewed choices in one undoable step. Nothing changes in the project before that press.
 - **Keep your source and your choices.** Review recognized required or absent Pfam rules, inspect the original cells, and edit or leave out proposals. Overlapping subclass definitions are named before import for review. Unmatched expected subclass names and other text the program cannot interpret stay as notes, which survive Save and reopen. Confirming the current family sheet keeps the draft; selecting another asks before clearing it.
@@ -29,9 +40,6 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 
 **Older calculated results.** On the checked project originally saved by 2.1.0, recomputing kept identified rows unchanged. De novo rows can differ because **PatternLab wins conflicting precursors**, on by default since 2.1.8, removes calls that conflict with a database identification for the same scan and precursor. Newly run Quantify credits a de novo peptide to targets tied at its best match score; earlier quantitation could credit every target above the identity threshold. On one checked project, the resulting family-share changes were at most about 0.1 percentage points.
 
-**Feature ledger.** 2,220 checks proved for 2.1.11; 3,240 remain open to verify again after release.
-
-### Earlier highlights
 
 **2.1.10** introduced:
 
@@ -97,9 +105,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.11 for your Windows user:
+Install FamilyQuant 2.1.12 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.11, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.12, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
