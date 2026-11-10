@@ -5,24 +5,33 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.14</h1>
+<h1 align="center">FamilyQuant 2.1.15</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.14](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.15](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.14
+## What's new in 2.1.15
+
+- **Every chart in the HTML report is drawn in the page.** Families, Signal recovery, Mass and isotopes, Database gap, Quality and Sensitivity draw their charts from the program's own numbers, instead of pictures. Point, tap or use the keyboard to read an exact value and what it is a percentage of; every chart names its base and works in light and dark, on a phone and in print.
+- **Every protein's coverage.** The Coverage tab lists every family, including those below the report threshold and Others, and every protein with placed peptides.
+- **The family ring follows Normalize to**, on a true 0 to 100% scale, with the part outside the shown families labelled.
+- **Recovery explained again**, with a guide to what each of the four readings divides by and what the gaps between them can and cannot mean.
+- **Recovery by mass range** replaces the "percent of ion current by mass" chart, in the program and in the HTML report. Projects quantified by an earlier version ask you to run **Quantify** again for this chart.
+- **Plainer words.** Shorter family names (the full header shows on hover), a "What the numbers mean" panel, and each chart names its base once.
+
+### Earlier highlights
+
+**2.1.14** introduced:
 
 - **Each peptide counts once.** The family contribution chart credits a peptide to at most one family; shared peptides have their own bar beside unattributed signal, and the bars add up to 100%. The "count in every family" choice is gone.
 - **De novo peptides use their measured envelope**, like identified peptides; the per-interval multiplier is gone. Results computed by an earlier version ask you to run **Quantify** again.
 - **Everything in the HTML report.** `report.html` opens in tabs with every Results figure and a plain legend under each. **Normalize to** at the top redraws the family ranking and the family contribution chart as a percentage of PSM only, PSM and de novo, Detector envelopes or TIC.
 - **A simpler program.** **Review grouping** opens in a Simple view, with **Show all options** for the rest. All exports are in one window, **File > Export**; the PNG figure export is gone, since the figures live in the HTML report.
 - **Smaller fixes.** The recovery chart shows the real isotope range, Quantify warns when a run has no de novo calls, new projects start at isotope ceiling 6, and **Import family list** appears as an optional first step.
-
-### Earlier highlights
 
 **2.1.13** introduced:
 
@@ -92,7 +101,7 @@ Earlier highlights include the **2.1.2 interactive HTML report**, which accompan
 
 ## Explore the report
 
-The `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it. From 2.1.14 it opens in tabs, and **Normalize to** at the top chooses the base of the family percentages.
+The `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it. It opens in tabs, every chart is drawn in the page, and **Normalize to** at the top chooses the base of the family percentages and the ring.
 
 The ring shows family composition. Select a segment or a family in **Across the runs** to inspect it; each run is a point, so variation is visible beside the mean. Short labels keep the view readable, and pop-ups show the exact values and explanations. Displayed result numbers are traced to the selected report, supplement or stored project values; the page does not rerun the analysis.
 
@@ -116,9 +125,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.14 for your Windows user:
+Install FamilyQuant 2.1.15 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.14, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.15, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
