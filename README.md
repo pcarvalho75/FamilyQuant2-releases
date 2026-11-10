@@ -5,21 +5,29 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.13</h1>
+<h1 align="center">FamilyQuant 2.1.14</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.13](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.14](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.13
+## What's new in 2.1.14
+
+- **Each peptide counts once.** The family contribution chart credits a peptide to at most one family; shared peptides have their own bar beside unattributed signal, and the bars add up to 100%. The "count in every family" choice is gone.
+- **De novo peptides use their measured envelope**, like identified peptides; the per-interval multiplier is gone. Results computed by an earlier version ask you to run **Quantify** again.
+- **Everything in the HTML report.** `report.html` opens in tabs with every Results figure and a plain legend under each. **Normalize to** at the top redraws the family ranking and the family contribution chart as a percentage of PSM only, PSM and de novo, Detector envelopes or TIC.
+- **A simpler program.** **Review grouping** opens in a Simple view, with **Show all options** for the rest. All exports are in one window, **File > Export**; the PNG figure export is gone, since the figures live in the HTML report.
+- **Smaller fixes.** The recovery chart shows the real isotope range, Quantify warns when a run has no de novo calls, new projects start at isotope ceiling 6, and **Import family list** appears as an optional first step.
+
+### Earlier highlights
+
+**2.1.13** introduced:
 
 - **Read database and scope works while UniProt's bulk downloads are down.** It now uses the keyword categories that **Fetch evidence** already saved in the project, and reads UniProt's keyword list only for keywords without one, page by page. Species lineages are read page by page too.
 - **The Scope box is always visible.** In **Review grouping > Evidence**, the Scope box and **Update proposal** sit directly under **Database and scope** and no longer scroll out of sight.
-
-### Earlier highlights
 
 **2.1.12** introduced:
 
@@ -84,7 +92,7 @@ Earlier highlights include the **2.1.2 interactive HTML report**, which accompan
 
 ## Explore the report
 
-The `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it.
+The `report.html` opens beside the Word report and supplement workbook. It is a self-contained page: open it in a browser, explore it offline, switch between light and dark, use it on a phone, or print it. From 2.1.14 it opens in tabs, and **Normalize to** at the top chooses the base of the family percentages.
 
 The ring shows family composition. Select a segment or a family in **Across the runs** to inspect it; each run is a point, so variation is visible beside the mean. Short labels keep the view readable, and pop-ups show the exact values and explanations. Displayed result numbers are traced to the selected report, supplement or stored project values; the page does not rerun the analysis.
 
@@ -108,9 +116,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.13 for your Windows user:
+Install FamilyQuant 2.1.14 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.13, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.14, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
@@ -171,7 +179,7 @@ Choose **4 Results** on Home or the sidebar, or **View > Results**, to explore t
 
 Choose **File > Report details**. Enter the title, authors, description, workflow, database kind and any written interpretation you want to include. Choose **Save details**, then **File > Save** to keep the changes in the project. The program's own findings are written from stored studies; your panel text and written interpretation remain separately identified.
 
-Choose **File > Export report** after Results are ready. Select sections and figures; each figure is listed by what it shows. Adjust **Report threshold (%)** if needed, and choose where to save the Word report.
+Choose **File > Export** after Results are ready, then **Report**. Select sections and figures; each figure is listed by what it shows. Adjust **Report threshold (%)** if needed, and choose where to save the Word report.
 
 ![Synthetic Export report dialog with figures listed by their descriptive titles](docs/images/app-report-dialogs.png)
 
