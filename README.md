@@ -5,16 +5,28 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.15</h1>
+<h1 align="center">FamilyQuant 2.1.16</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.15](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.16](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.15
+## What's new in 2.1.16
+
+- **Quantify no longer stops when a run has no de novo calls.** The warning about such runs had stopped the computation with "The calling thread cannot access this object"; progress and warnings now always reach the window on its own thread.
+- **Import family list is simpler.** **Use template** writes an empty sheet with a **Subclasses** sheet; a sheet with the program's columns goes through three pages; Pfam codes you give are taken as given; **Accept** closes the window and **File > Save** keeps the list at once.
+- **A UniProt family column** keeps families that share a Pfam domain apart and carries your Panel links choices into new projects.
+- **Fewer Panel links questions.** The row whose own Pfam list a protein covers most completely wins; only real ties are asked, and your choices always win.
+- **Where every protein goes.** Review grouping counts proteins in your list, in-scope proteins outside it and proteins outside the scope; the Family checklist gives every row its state.
+- **Subclasses in the report.** Subclasses defined in your list reach the HTML report, also for families below the report threshold, and a re-imported list updates families that were already grouped.
+- **Clearer names.** **Fetch family world** is now **Fetch UniProt families**; every tab under **Show all options** says what it is for.
+
+### Earlier highlights
+
+**2.1.15** introduced:
 
 - **Every chart in the HTML report is drawn in the page.** Families, Signal recovery, Mass and isotopes, Database gap, Quality and Sensitivity draw their charts from the program's own numbers, instead of pictures. Point, tap or use the keyboard to read an exact value and what it is a percentage of; every chart names its base and works in light and dark, on a phone and in print.
 - **Every protein's coverage.** The Coverage tab lists every family, including those below the report threshold and Others, and every protein with placed peptides.
@@ -22,8 +34,6 @@ FamilyQuant is a Windows desktop application for exploring protein-family compos
 - **Recovery explained again**, with a guide to what each of the four readings divides by and what the gaps between them can and cannot mean.
 - **Recovery by mass range** replaces the "percent of ion current by mass" chart, in the program and in the HTML report. Projects quantified by an earlier version ask you to run **Quantify** again for this chart.
 - **Plainer words.** Shorter family names (the full header shows on hover), a "What the numbers mean" panel, and each chart names its base once.
-
-### Earlier highlights
 
 **2.1.14** introduced:
 
@@ -125,9 +135,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.15 for your Windows user:
+Install FamilyQuant 2.1.16 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.15, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.16, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
