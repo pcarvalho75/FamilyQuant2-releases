@@ -5,24 +5,29 @@
   </picture>
 </p>
 
-<h1 align="center">FamilyQuant 2.1.18</h1>
+<h1 align="center">FamilyQuant 2.1.19</h1>
 
 <p align="center">Protein-family composition from your own evidence.</p>
 
 FamilyQuant is a Windows desktop application for exploring protein-family composition from database identifications and de novo peptide evidence. It lets you curate families with your own panel and quantify their contributions across runs. It writes a report from the project's results, with a Word document, a workbook and an interactive page.
 
-[Download FamilyQuant 2.1.18](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
+[Download FamilyQuant 2.1.19](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest) · [Step-by-step guide](#step-by-step) · [Troubleshooting](#troubleshooting)
 
 
-## What's new in 2.1.18
+## What's new in 2.1.19
+
+- **The report exports after Fetch UniProt families.** Fetching the UniProt families after Apply grouping no longer stops Export with "Family assignment evidence is missing or out of date": that download serves only the Database gap estimate, and grouping never reads it. A project already saved in that state needs no new grouping: Export checks the assignments against the current evidence and goes on when no protein would get another family.
+- **Review grouping shows only tabs with something in them.** A tab under Show all options with no row for your project is hidden until it has one.
+
+### Earlier highlights
+
+**2.1.18** introduced:
 
 - **A family of your list keeps its members.** A row that names a UniProt family now also takes proteins that have no family annotation of their own, when the row lists every one of their Pfam domains and is their best row; a protein whose own UniProt family is a different one stays out, and the scope words work as before.
 - **The report exports after you curate.** Moving proteins after Apply grouping (Edit selected proteins, Group by keywords, Recluster by words) no longer stops the report; the moved proteins show "Moved by you" or "Regrouped by words" in the protein audit, and Undo restores both.
 - **Your sheet is taken as written.** Pfam codes in your family list are accepted before or after Fetch evidence, with **Un-confirm** in the import summary and in Family checklist; the Columns page shows only your sheet's columns and says why Next is unavailable.
 - **The grouping steps in working order.** Group by words comes before Quantify; Fetch UniProt families is optional, since Fetch evidence already brings each protein's own UniProt family.
 - **Family names in your language** (File > Export > Family names) and a **Pie** view of the family chart in the HTML report and on the Results screen.
-
-### Earlier highlights
 
 **2.1.17** introduced:
 
@@ -147,9 +152,9 @@ All screenshots on this page use synthetic data.
 
 Use 64-bit Windows 10 or 11.
 
-Install FamilyQuant 2.1.18 for your Windows user:
+Install FamilyQuant 2.1.19 for your Windows user:
 
-1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.18, and download its `FamilyQuant2-<version>-Setup.exe` installer.
+1. Open the [latest release](https://github.com/pcarvalho75/FamilyQuant2-releases/releases/latest), check that it is version 2.1.19, and download its `FamilyQuant2-<version>-Setup.exe` installer.
 2. Run the installer. It installs for the current user without administrator privileges in `%LOCALAPPDATA%\Programs\FamilyQuant2` and creates a Start menu shortcut.
 3. If Windows shows **Windows protected your PC**, choose **More info > Run anyway**. The installer is unsigned.
 
